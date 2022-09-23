@@ -26,7 +26,7 @@ images/color-normal/%.jpg: src/%.png
 	jpegoptim --strip-all --all-progressive $@
 
 images/color-blur/%.jpg: src/%.png
-	convert $< -resize $(IMAGE_SIZE)^ -blur 2x2 -quality $(JPEG_QUALITY) $@
+	convert $< -resize $(IMAGE_SIZE)^ -blur 3x3 -quality $(JPEG_QUALITY) $@
 	jpegoptim --strip-all --all-progressive $@
 
 images/gray-normal/%.jpg: src/%.png
@@ -34,7 +34,7 @@ images/gray-normal/%.jpg: src/%.png
 	jpegoptim --strip-all --all-progressive $@
                                 
 images/gray-blur/%.jpg: src/%.png
-	convert $< -resize $(IMAGE_SIZE)^ -blur 2x2 -fx 'r*0.299+g*0.587+b*0.114' -colorspace Gray -quality $(JPEG_QUALITY) $@
+	convert $< -resize $(IMAGE_SIZE)^ -blur 3x3 -fx 'r*0.299+g*0.587+b*0.114' -colorspace Gray -quality $(JPEG_QUALITY) $@
 	jpegoptim --strip-all --all-progressive $@
 
 src/amabi.png:
