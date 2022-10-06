@@ -1,4 +1,19 @@
-MAP_KEYS := amabi chozame gonzui kinmedai mahimahi masaba mategai namero sumeshi yagara yunohana zatou
+MAP_KEYS := \
+	amabi \
+	aramaki \
+	chozame \
+	dam \
+	gonzui \
+	kinmedai \
+	mahimahi \
+	masaba \
+	mategai \
+	meuniere \
+	namero \
+	sumeshi \
+	yagara \
+	yunohana \
+	zatou
 
 SRC_FILES := $(addprefix src/,$(addsuffix .png,$(MAP_KEYS)))
 
@@ -40,8 +55,14 @@ images/gray-blur/%.jpg: src/%.png
 src/amabi.png:
 	curl -fsSL 'https://cdn.wikimg.net/en/splatoonwiki/images/9/9e/S3_Inkblot_Art_Academy.jpeg' | convert - 'src/amabi.png'
 
+src/aramaki.png:
+	curl -fsSL 'https://splatoon3.ink/assets/splatnet/stage_img/icon/high_resolution/3418d2d89ef84288c78915b9acb63b4ad48df7bfcb48c27d6597920787e147ec_0.png' | convert - 'src/aramaki.png'
+
 src/chozame.png:
 	curl -fsSL 'https://cdn.wikimg.net/en/splatoonwiki/images/a/a5/S3_Sturgeon_Shipyard.jpg' | convert - 'src/chozame.png'
+
+src/dam.png:
+	curl -fsSL 'https://splatoon3.ink/assets/splatnet/stage_img/icon/high_resolution/be584c7c7f547b8cbac318617f646680541f88071bc71db73cd461eb3ea6326e_0.png' | convert - 'src/dam.png'
 
 src/gonzui.png:
 	curl -fsSL 'https://cdn.wikimg.net/en/splatoonwiki/images/8/84/S3_promo_screenshot_Eeltail_Alley_00.jpg' | convert - 'src/gonzui.png'
@@ -60,6 +81,9 @@ src/mategai.webp:
 
 src/mategai.png: src/mategai.webp
 	dwebp -mt $< -o $@
+
+src/meuniere.png:
+	curl -fsSL 'https://splatoon3.ink/assets/splatnet/stage_img/icon/high_resolution/f1e4df4cff1dc5e0acc66a9654fecf949224f7e4f6bd36305d4600ac3fa3db7b_0.png' | convert - 'src/meuniere.png'
 
 src/namero.webp:
 	curl -fsSL -o $@ 'https://cdn.wikimg.net/en/splatoonwiki/images/a/a8/S3MincemeatMetalworksIcon.webp'
