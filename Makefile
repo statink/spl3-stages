@@ -3,8 +3,11 @@ MAP_KEYS := \
 	aramaki \
 	chozame \
 	dam \
+	donburako \
 	gonzui \
+	hirame \
 	kinmedai \
+	kusaya \
 	mahimahi \
 	masaba \
 	mategai \
@@ -64,11 +67,20 @@ src/chozame.png:
 src/dam.png:
 	curl -fsSL 'https://splatoon3.ink/assets/splatnet/stage_img/icon/high_resolution/be584c7c7f547b8cbac318617f646680541f88071bc71db73cd461eb3ea6326e_0.png' | convert - 'src/dam.png'
 
+src/donburako.png:
+	curl -fsSL -o $@ 'https://cdn.wikimg.net/en/splatoonwiki/images/0/01/S3_Stage_Marooner%27s_Bay.png'
+
 src/gonzui.png:
 	curl -fsSL 'https://cdn.wikimg.net/en/splatoonwiki/images/8/84/S3_promo_screenshot_Eeltail_Alley_00.jpg' | convert - 'src/gonzui.png'
 
+src/hirame.png:
+	curl -fsSL 'https://cdn.wikimg.net/en/splatoonwiki/images/2/24/S3_Flounder_Heights.jpg' | convert - 'src/hirame.png'
+
 src/kinmedai.png:
 	curl -fsSL 'https://cdn.wikimg.net/en/splatoonwiki/images/2/2c/S3_Stage_Museum_d%27Alfonsino_Promo_1.jpg' | convert - 'src/kinmedai.png'
+
+src/kusaya.png:
+	curl -fsSL -o $@ 'https://cdn.wikimg.net/en/splatoonwiki/images/b/bf/S3_Brinewater_Springs.png'
 
 src/mahimahi.png:
 	curl -fsSL 'https://cdn.wikimg.net/en/splatoonwiki/images/b/b7/S3MahiMahiResortIcon.jpeg' | convert - 'src/mahimahi.png'
@@ -105,4 +117,3 @@ src/yunohana.png:
 
 src/zatou.png:
 	curl -fsSL 'https://cdn.wikimg.net/en/splatoonwiki/images/a/ac/S3_Mako_Mart.jpg' | convert - 'src/zatou.png'
-
